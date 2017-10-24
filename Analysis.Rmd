@@ -1,0 +1,10 @@
+---
+title: "Variation_SNPs analysis"
+output: html_document
+---
+
+# Load in Data
+
+# View data
+
+# Plot data
