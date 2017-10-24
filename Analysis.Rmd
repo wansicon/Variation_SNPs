@@ -28,4 +28,9 @@ data$GC.binned <- cut(data$percent.GC, 5)
 ggplot(data) + geom_bar(aes(x = GC.binned))
 
 ```
+```{r Calculate the mean depth and plot}
+mean(data$depth)
+ggplot(data) + geom_bar(aes(x = data$depth))
+
+```
 
