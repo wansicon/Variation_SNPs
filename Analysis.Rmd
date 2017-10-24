@@ -6,10 +6,14 @@ output: html_document
 # Load in Data
 ```{r load-data}
 data <- read.csv("data/Dataset_S1.txt")
+# View data
 head(data)
 ```
 
 
-# View data
-
 # Plot data
+```{r Plot-gc}
+colnames(data)[12] <- "percent.GC"
+
+```
+
