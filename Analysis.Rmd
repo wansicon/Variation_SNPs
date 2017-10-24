@@ -3,6 +3,12 @@ title: "Variation_SNPs analysis"
 output: html_document
 ---
 
+```{r Load packages}
+library("ggplot2")
+
+```
+
+
 # Load in Data
 ```{r load-data}
 data <- read.csv("data/Dataset_S1.txt")
@@ -14,6 +20,12 @@ head(data)
 # Plot data
 ```{r Plot-gc}
 colnames(data)[12] <- "percent.GC"
+
+# Bin data into 5 bins
+data$GC.binned <- cut(data$percent.GC, 5)
+
+# plot data
+ggplot(data) + geom_bar(aes(x = GC.binned))
 
 ```
 
